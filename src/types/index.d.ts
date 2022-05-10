@@ -16,7 +16,7 @@ type ForgeServerData = {
   id: string;
   name: string;
   status: string;
-  core: ForgeCore;
+  core: ForgeServerCore;
   mods: string[];
   gameVersion: string;
   gameVersionTypeId: number;
