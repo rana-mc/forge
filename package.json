@@ -1,0 +1,30 @@
+{
+  "name": "@rana-mc/forge",
+  "version": "0.2.1",
+  "main": "./build/main.js",
+  "types": "./build/main.d.ts",
+  "type": "module",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "postinstall": "tsc",
+    "build": "tsc",
+    "prestart": "tsc",
+    "start": "node --es-module-specifier-resolution=node build/main.js",
+    "watch": "tsc-watch --onSuccess \"node --es-module-specifier-resolution=node build/main.js\""
+  },
+  "dependencies": {
+    "@types/download": "^8.0.1",
+    "@types/node": "^16.11.13",
+    "@types/shelljs": "^0.8.9",
+    "axios": "^0.24.0",
+    "download": "^8.0.0",
+    "lowdb": "^3.0.0",
+    "node-html-parser": "^5.1.0",
+    "shelljs": "^0.8.4",
+    "tsc-watch": "^4.6.0",
+    "typescript": "^4.5.2"
+  }
+}
