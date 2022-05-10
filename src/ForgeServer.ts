@@ -25,13 +25,13 @@ export class ForgeServer extends EventEmitter {
 
   private logger: Logger;
 
-  private server: Server;
+  private server: ForgeServerData;
 
   private process: ChildProcess;
 
   private workspace: ServerWorkspace;
 
-  constructor(server: Server) {
+  constructor(server: ForgeServerData) {
     super();
 
     this.server = server;
@@ -153,7 +153,7 @@ export class ForgeServer extends EventEmitter {
   /**
    * Update server data.
    */
-  public update(server: Server): ForgeServer {
+  public update(server: ForgeServerData): ForgeServer {
     this.server = server;
     return this;
   }

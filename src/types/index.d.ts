@@ -12,14 +12,12 @@ type ExternalForgeCoreUrl = {
   name: string;
 };
 
-type ServerMod = string;
-
-type Server<T = ForgeCore> = {
+type ForgeServerData = {
   id: string;
   name: string;
   status: string;
-  core: T;
-  mods: ServerMod[];
+  core: ForgeCore;
+  mods: string[];
   gameVersion: string;
   gameVersionTypeId: number;
   eula: boolean;
