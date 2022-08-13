@@ -15,6 +15,10 @@ export default class ForgeLocalDB {
     const adapter = new JSONFile<ForgeLocalDBData>(ForgeLocalDB.PATH);
     const db = new Low<ForgeLocalDBData>(adapter);
 
+    if (db.data === null) {
+      db.data = { cores: {} };
+    }
+
     this.db = db;
     await this.db.read();
 

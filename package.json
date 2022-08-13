@@ -8,11 +8,14 @@
   "publishConfig": {
     "access": "public"
   },
+  "bin": {
+    "ranamc-forge": "./build/main.js"
+  },
   "scripts": {
     "postinstall": "tsc",
     "build": "tsc",
-    "prestart": "tsc",
     "start": "node --es-module-specifier-resolution=node build/main.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "watch": "tsc-watch --onSuccess \"node --es-module-specifier-resolution=node build/main.js\""
   },
   "dependencies": {
@@ -25,6 +28,12 @@
     "node-html-parser": "^5.1.0",
     "shelljs": "^0.8.4",
     "tsc-watch": "^4.6.0",
-    "typescript": "^4.5.2"
+    "typescript": "^4.5.2",
+    "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "jest": "^28.1.3",
+    "ts-jest": "^28.0.7"
   }
 }
