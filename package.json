@@ -13,7 +13,6 @@
     "build": "tsc",
     "prestart": "tsc",
     "start": "node --es-module-specifier-resolution=node build/main.js",
-    "pretest": "tsc",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "watch": "tsc-watch --onSuccess \"node --es-module-specifier-resolution=node build/main.js\""
   },
