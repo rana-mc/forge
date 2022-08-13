@@ -1,0 +1,6 @@
+{
+  "preset": "ts-jest",
+  "moduleDirectories": ["node_modules"],
+  "testEnvironment": "node",
+  "rootDir": "build"
+}
